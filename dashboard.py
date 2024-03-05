@@ -8,10 +8,13 @@ sns.set(style='dark')
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
-all_df = pd.read_csv("all_data.csv")
+all_df = pd.read_csv("all_df.csv")
+st.title("Brazilian E-commerce Data Dashboard")
+
+st.subheader("The Dataset")
+st.dataframe(data=all_df, width=500, height=150)
 
 st.subheader("Wilayah geografis yang paling banyak ditempati customer")
-
 state_customer_counts = all_df.groupby(by="customer_state")["customer_id"].nunique().sort_values(ascending=False)
 # Plot the bar chart
 plt.figure(figsize=(12, 6))
