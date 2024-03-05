@@ -1,3 +1,5 @@
+pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel datetime
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
